@@ -1,0 +1,201 @@
+\section{Switched Capacitor Filter}
+
+\subsection{Task Description}
+    A 5th-order clock-tunable switched capacitor filter based on the LT1063 (dual $\pm$5V supply) was implemented. 
+    A non-inverting preamplifier stage using the LM4562 with a gain of 100 was placed in front of the filter.
+    
+    The frequency response was measured for two clock frequencies (1 MHz and 500 kHz) and compared in a Bode plot. 
+    The filter behavior near the clock frequency was investigated in the time domain, including possible clock feedthrough effects.
+    
+    The total output noise was measured using additional amplification stages, and the input-referred noise voltage was determined for different source resistances. 
+    Finally, the SNR and ENOB were calculated for a full-scale sine wave.
+
+\subsection{Schematic}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img//e_lab_3/schematic-2_4.png}
+        \caption{Schematic of the switched-capacitor filter with pre-amplifier stage.}
+        \label{fig:Schematic-2_4}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img//e_lab_4/schematic-2_5.png}
+        \caption{Schematic of the low pass filter and amplifier for noise measurement.}
+        \label{fig:Schematic-2_5}
+    \end{figure}
+
+\subsection{Formulas and Calculations}
+
+
+\subsection{Table(s) with Measurement Results}
+    \begin{table}[H]
+        \centering
+        \caption{Component values for switched capacitor filter}
+        \begin{tabular}{c!{\vrule width 2pt}c!{\vrule width 2pt}c!{\vrule width 2pt}c|}
+            \cline{2-4}
+             & \textbf{Calculated} & \textbf{Chosen} & \textbf{Measured} 
+            \\ \noalign{\hrule height 2pt}
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_g$ in \textohm} & 50 & 50 & 51.085 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_{g2}$ in k\textohm} & 100 & 100 & 99.959 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_1$ in \textohm} & - & 1000 & 994.81 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_2$ in k\textohm} & - & 100 & 99.761 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_1$ in nF} & - & 100 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_2$ in nF} & - & 100 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_3$ in nF} & - & 100 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_4$ in nF} & - & 100 & - \\ \hline
+        \end{tabular}
+        \label{tab:sc_filter_components}
+    \end{table}
+    
+    \begin{table}[H]
+        \centering
+        \caption{Component values for low pass filter and noise measurement amplifier}
+        \begin{tabular}{c!{\vrule width 2pt}c!{\vrule width 2pt}c!{\vrule width 2pt}c|}
+            \cline{2-4}
+             & \textbf{Calculated} & \textbf{Chosen} & \textbf{Measured} 
+            \\ \noalign{\hrule height 2pt}
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_1$ in \textohm} & - & 820 & 817 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_2$ in k\textohm} & - & 8.2 & 8.1602 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_3$ in k\textohm} & - & 2.7 & 2.6888 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_4$ in \textohm} & 1000 & 1000 & 996.6 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_5$ in k\textohm} & 100 & 100 & 99.585 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_1$ in pF} & - & 150 & 155 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_2$ in nF} & - & 4.7 & 4.61 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_3$ in \textmu F} & - & 1.5 & 1.56 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_4$ in nF} & - & 100 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_5$ in \textmu F} & - & 10 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_6$ in nF} & - & 100 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_7$ in \textmu F} & - & 10 & - \\ \hline
+        \end{tabular}
+        \label{tab:noise_amp_components}
+    \end{table}
+    The measured resistor values confirm the 1\% tolerance specification. 
+    Since the switched capacitor filter cutoff frequency is defined by the clock frequency rather than absolute capacitor values, the passive component tolerances have only minor influence on the filter characteristics.
+    
+    \begin{longtable}{|c|c|c|}
+        \caption{\centering Measured frequency response of switched capacitor filter (CLK = 1 MHz)}
+        \label{tab:sc_filter_clk1MHz} \\
+        \hline
+        \textbf{Input Frequency / Hz} & \textbf{Gain / dB} & \textbf{Phase / Degree} \\
+        \hline
+        \endfirsthead
+    
+        \caption[]{\centering Measured frequency response of switched capacitor filter (CLK = 1 MHz, continuation)} \\
+        \hline
+        \textbf{Input Frequency / Hz} & \textbf{Gain / dB} & \textbf{Phase / Degree} \\
+        \hline
+        \endhead
+    
+        \hline
+        \endfoot
+    
+        \hline
+        \endlastfoot
+    
+        1      & 40.2 & 1.33  \\
+        10     & 40.2 & 0     \\
+        50     & 40.2 & 0     \\
+        100    & 40.2 & 0     \\
+        300    & 40.2 & -5    \\
+        500    & 40.2 & -10   \\
+        1000   & 40.1 & -18   \\
+        2000   & 40.0 & -30   \\
+        3000   & 39.9 & -50   \\
+        4000   & 39.7 & -70   \\
+        5000   & 39.3 & -90   \\
+        6000   & 39.0 & -100  \\
+        7000   & 38.6 & -120  \\
+        8000   & 38.2 & -135  \\
+        9000   & 37.8 & -160  \\
+        10000  & 37.2 & 180   \\
+        11000  & 36.6 & 160   \\
+        12000  & 35.8 & 140   \\
+        13000  & 35.0 & 120   \\
+        14000  & 34.0 & 100   \\
+        15000  & 33.0 & 84    \\
+        16000  & 31.8 & 68    \\
+        17000  & 30.7 & 50    \\
+        18000  & 29.4 & 33    \\
+        19000  & 28.1 & 18    \\
+        20000  & 26.7 & 15    \\
+        21000  & 25.3 & -18   \\
+        22000  & 23.6 & -30   \\
+        23000  & 21.7 & -50   \\
+        24000  & 19.7 & -60   \\
+        25000  & 17.5 & -85   \\
+        30000  & 6.7  & -120  \\
+        40000  & -6.0 & -150  \\
+    
+    \end{longtable}
+    % The switched capacitor filter shows a flat passband gain of approximately 40 dB. 
+    % The phase shift increases progressively until reaching −90° around 5 kHz, which indicates the dominant pole region. 
+    % A phase discontinuity near 10 kHz can be observed due to phase wrapping (±180° representation). 
+    % The cutoff frequency is determined at the −3 dB point relative to the passband gain.
+    
+    \begin{longtable}{|c|c|c|}
+        \caption{\centering Measured frequency response of switched capacitor filter (CLK = 500 kHz)}
+        \label{tab:sc_filter_clk500kHz} \\
+        \hline
+        \textbf{Input Frequency / Hz} & \textbf{Gain / dB} & \textbf{Phase / Degree} \\
+        \hline
+        \endfirsthead
+    
+        \caption[]{\centering Measured frequency response of switched capacitor filter (CLK = 500 kHz, continuation)} \\
+        \hline
+        \textbf{Input Frequency / Hz} & \textbf{Gain / dB} & \textbf{Phase / Degree} \\
+        \hline
+        \endhead
+    
+        \hline
+        \endfoot
+    
+        \hline
+        \endlastfoot
+    
+        1      & 40.2 & 1.4   \\
+        10     & 40.2 & 0     \\
+        50     & 40.2 & 0     \\
+        100    & 40.2 & 0     \\
+        300    & 40.2 & -10   \\
+        500    & 40.1 & -18   \\
+        700    & 40.1 & -25   \\
+        1000   & 40.0 & -37   \\
+        1500   & 39.9 & -56   \\
+        2000   & 39.6 & -70   \\
+        2500   & 39.3 & -90   \\
+        3000   & 39.0 & -110  \\
+        3500   & 38.6 & -128  \\
+        4000   & 38.2 & -145  \\
+        4500   & 37.7 & -164  \\
+        5000   & 37.2 & 180   \\
+        5500   & 36.5 & 160   \\
+        6000   & 35.8 & 140   \\
+        6500   & 34.9 & 122   \\
+        7000   & 34.0 & 100   \\
+        7500   & 32.8 & 85    \\
+        8000   & 31.8 & 70    \\
+        9000   & 29.5 & 35    \\
+        10000  & 26.7 & 0     \\
+        11000  & 23.6 & -33   \\
+        12000  & 19.6 & -70   \\
+        13000  & 15.3 & -90   \\
+        14000  & 11.0 & -115  \\
+        15000  & 7.1  & -136  \\
+        16000  & 3.2  & -150  \\
+        17000  & -0.4 & -160  \\
+    
+    \end{longtable}
+    
+    When reducing the clock frequency from 1 MHz to 500 kHz, the cutoff frequency of the switched capacitor filter decreases proportionally. 
+    This confirms the theoretical relationship:
+    
+    \[
+    f_c \propto f_{CLK}
+    \]
+    
+    The measured data shows approximately half the cutoff frequency compared to the 1 MHz case, which validates the internal switched capacitor principle.
+    Phase wrapping at ±180° is again visible due to measurement representation.
+
+\subsection{Curves \& Diagrams}
+
+\subsection{Discussion of Measurement Results}

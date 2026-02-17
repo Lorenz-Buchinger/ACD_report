@@ -1,0 +1,7 @@
+\item
+    \begin{tabbing}
+        \hspace*{10em} \= \kill
+        LCR-Meter \\
+        \ifthenelse{\equal{\german}{true}}{Hersteller}{Manufacturer}:  \>Keysight \\
+        \ifthenelse{\equal{\german}{true}}{Modellbezeichnung}{Model}:  \>U1733C
+    \end{tabbing}

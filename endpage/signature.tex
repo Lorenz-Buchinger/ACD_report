@@ -1,0 +1,49 @@
+\begin{figure}[b]
+  \begin{minipage}[b]{0.3\textwidth}
+    \hfill
+  \end{minipage}
+  \hfill
+  \centering
+  \begin{minipage}[b]{0.3\textwidth}
+    \centering
+    \ifdefined\ReportAuthorOne
+      \begin{tikzpicture}
+        \node[anchor=south west, inner sep=0] (image1) at (0,0) {\includegraphics[width=\textwidth]{endpage/SignatureAuthorOne.jpg}};
+        \draw[line width=.7pt] (image1.south west) -- (image1.south east);
+      \end{tikzpicture}
+    \fi
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\textwidth}
+    \centering
+    \ifdefined\ReportAuthorTwo
+      \begin{tikzpicture}
+        \node[anchor=south west, inner sep=0] (image2) at (0,0) {\includegraphics[width=\textwidth]{endpage/SignatureAuthorTwo.png}};
+        \draw[line width=.7pt] (image2.south west) -- (image2.south east);
+      \end{tikzpicture}
+    \fi
+  \end{minipage}
+  
+  \vspace{0.5em}
+  
+  \begin{minipage}[b]{0.3\textwidth}
+    \raggedleft
+    \ifthenelse{\equal{\german}{true}}{Graz, dem \today}{Graz, \today}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\textwidth}
+    \centering
+    \ifdefined\ReportAuthorOne
+      {\ReportAuthorOne} \\
+    \fi
+  \end{minipage}
+    \hfill
+  \begin{minipage}[b]{0.3\textwidth}
+    \centering
+    \ifdefined\ReportAuthorTwo
+      {\ReportAuthorTwo} \\
+    \fi
+  \end{minipage}
+  
+  \vspace{2cm}
+\end{figure}

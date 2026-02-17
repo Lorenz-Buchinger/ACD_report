@@ -1,0 +1,118 @@
+% !TeX root = main.tex
+
+\input{IEE_types.sty}
+%%%%% SOME OPTIONS %%%%% 
+\newcommand{\german}{false} % germanTrue or false --> Switch between german and english headers / titlepage
+\newcommand{\coloredTitlePage}{false} %false Switch between colored and BW titlepage
+\newcommand{\company}{false}
+\newcommand{\DocType}{\Report} %\Thesis \Report
+\newcommand{\DegProg}{\ECE}	%\ECE \ECM \STM \MEC
+\newcommand{\Style}{\PDF}	%\PDF \Book
+\newcommand{\FancyFactor}{\normalStyle}	%EasterEgg
+%%%%% Required Settings for the template %%%%%
+\input{IEEconfig.sty}
+
+%%% Eigene Packete
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{comment}
+\usepackage[nodayofweek,level]{datetime}
+\usepackage{lipsum}
+\usepackage{catchfile}
+\usepackage{adjustbox}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{matlab-prettifier}
+\usepackage[inkscapeversion=1]{svg}
+\usepackage{longtable}
+
+%%% Farben
+\definecolor{number}{gray}{0.6}
+\definecolor{back}{gray}{0.95}
+
+\usepackage{listings}
+\lstdefinestyle{Arduino}{
+  language=C++,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green!60!black},
+  stringstyle=\color{orange!70!black}, % Soft orange color
+  showstringspaces=false,
+  breaklines=true,
+  frame=single,
+  numbers=none, 
+  numberstyle=\tiny\color{gray}, % Line numbers in gray
+  stepnumber=1, % Increment line numbers by 1
+  captionpos=b,
+  tabsize=2
+}
+
+
+\usepackage{multirow}
+\usepackage{makecell}
+
+\usepackage{subcaption}
+\usepackage{siunitx}
+
+
+\sisetup{output-exponent-marker=\text{e}}
+\sisetup{output-decimal-marker={,}}
+
+
+%%% Geräteverzeichnis auswahl %%%%
+\excludecomment{Handmultimeter}
+\excludecomment{Tischmultimeter}
+\excludecomment{Labornetzteil}
+\excludecomment{Oszilloskop}
+\excludecomment{Frequenzgenerator}
+\excludecomment{LCR-Meter}
+
+%%% Die nicht verwendeten Geräte auskommentieren 
+%\includecomment{Handmultimeter}
+\includecomment{Tischmultimeter}
+%\includecomment{Labornetzteil}
+\includecomment{Oszilloskop}
+\includecomment{Frequenzgenerator}
+\includecomment{LCR-Meter}
+
+%%% Matlab Packete
+%\input{matlab/matlab_preamble}
+
+%%% Settings
+\renewcommand{\arraystretch}{1.1}
+
+\begin{document}
+%frontmatter inluding: titlepage, abstract, acknowledgments, declaration, toc, lof, lot
+\frontmatter
+\renewcommand{\thepage}{\Roman{page}}
+
+%%%% Modify your titlepage by configuring "titlepage/titlepage_config.tex"
+%%% BEGIN TITLEPAGE
+\input{titlepage/loadTitlepage.tex}
+%%% END TITLEPAGE
+
+\tableofcontents
+
+\mainmatter %including: Parts, chapters, sections, appendicies
+\renewcommand{\thepage}{\arabic{page}}
+
+%%%% Abschnitte %%%%
+
+\input{chapters/c_lab_1}
+\input{chapters/e_lab_1}
+\input{chapters/e_lab_2}
+\input{chapters/e_lab_3}
+
+%%%%  If necessary Appendicies %%%%%%%%%
+
+\input{endpage/device.tex}
+\input{endpage/signature.tex}
+
+\begin{appendices} % Put Appendicies here !! 
+    \input{chapters/appendix}
+    %\input{matlab/Final_code.tex}
+\end{appendices} 
+
+
+\end{document}

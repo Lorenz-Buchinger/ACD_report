@@ -1,0 +1,34 @@
+\begin{titlepage}
+    \begin{figure}
+        \raggedleft
+        \includegraphics[width=0.6\linewidth]{temp_graphics/logo_FHJ_ECE_white-eps-converted-to.pdf}
+
+        \vspace{2cm}
+    \end{figure}    
+    
+    \begin{center}
+        {\Huge \textbf{\ReportTitle}} \\
+        \vspace{1cm}
+        \ifthenelse{\equal{\german}{true}}{\LARGE \textbf{Laborprotokoll}}{\LARGE \textbf{Lab Report}} \\
+        % {\LARGE \textbf{Laborprotokoll} \\
+        \vspace{1cm}
+        \ifthenelse{\equal{\german}{true}}{\Large \textbf{angefertigt von:}}{\Large \textbf{written by:}} \\
+        % {\Large \textbf{angefertigt von:}} \\
+        \vspace{0.1cm}
+        \ifdefined\ReportAuthorOne
+            {\Large \ReportAuthorOne} \\
+        \fi
+        \vspace{0.1cm}
+        \ifdefined\ReportAuthorTwo
+            {\Large \ReportAuthorTwo} \\
+        \fi
+        \vspace{3cm}
+        % {\LARGE Elektronik und Computer Engineering} \\
+        \ifthenelse{\equal{\german}{true}}{\LARGE Elektronik und Computer Engineering}{\LARGE Power Electronics Engineering} \\
+        \vspace{0.3cm}
+        {\LARGE FH JOANNEUM -- University of Applied Sciences, Austria} \\
+        \vspace{2cm}
+        {\Large \textbf{\LabDate}}
+    \end{center}
+\end{titlepage}
+\newpage

@@ -1,0 +1,90 @@
+\input{titlepage/titlepage_config}
+
+\renewcommand{\familydefault}{\sfdefault}
+\normalfont 
+
+
+\ifthenelse{\equal{\german}{true}}
+{	
+	
+	\ifthenelse{\equal{\DocType}{\Report} \AND \equal{\DegProg}{\ECE}}
+	{
+		\newcommand{\DocTypeText}{Lab report}
+		\newcommand{\OrgaText}{Elektronik und Computer Engineering}
+		\newcommand{\ThesisDate}{Graz, \today} %Place and the generated date 	
+	}{}
+	\ifthenelse{\equal{\DocType}{\Report} \AND \equal{\DegProg}{\MEC}}
+	{
+		\newcommand{\DocTypeText}{Lab report}
+		\newcommand{\OrgaText}{Industrielle Mechatronik}
+		\newcommand{\ThesisDate}{Kapfenberg, \today} %Place and the generated date 	
+	}{}
+	\ifthenelse{\equal{\DocType}{\Report} \AND \equal{\DegProg}{\ECM}}
+	{
+		\newcommand{\DocTypeText}{Lab report} 
+		\newcommand{\OrgaText}{Electronics and Computer Engineering}
+		\newcommand{\ThesisDate}{Kapfenberg, \today} %Place and the generated date	
+	}{}
+	\ifthenelse{\equal{\DocType}{\Report} \AND \equal{\DegProg}{\STM}}
+	{
+		\newcommand{\DocTypeText}{Lab report} 
+		\newcommand{\OrgaText}{System Test Engineering}
+		\newcommand{\ThesisDate}{Graz, \today} %Place and the generated date	
+	}{}
+	
+}
+{
+	\ifthenelse{\equal{\DocType}{\Report} \AND \equal{\DegProg}{\ECE}}
+	{
+		\newcommand{\DocTypeText}{Report}
+		\newcommand{\OrgaText}{Elektronik und Computer Engineering}
+		\newcommand{\ThesisDate}{Graz, \today} %Place and the generated date
+	}{}
+	\ifthenelse{\equal{\DocType}{\Report} \AND \equal{\DegProg}{\MEC}}
+	{
+		\newcommand{\DocTypeText}{Report}
+		\newcommand{\OrgaText}{Industrielle Mechatronik}
+		\newcommand{\ThesisDate}{Kapfenberg, \today} %Place and the generated date
+	}{}
+	\ifthenelse{\equal{\DocType}{\Report} \AND \equal{\DegProg}{\ECM}}
+	{
+		\newcommand{\DocTypeText}{Report}
+		\newcommand{\OrgaText}{Electronics and Computer Engineering}
+		\newcommand{\ThesisDate}{Kapfenberg, \today} %Place and the generated date
+	}{}
+	\ifthenelse{\equal{\DocType}{\Report} \AND \equal{\DegProg}{\STM}}
+	{
+		\newcommand{\DocTypeText}{Report} 
+		\newcommand{\OrgaText}{System Test Engineering}
+		\newcommand{\ThesisDate}{Graz, \today} %Place and the generated date	
+	}{}
+		
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifthenelse{\equal{\coloredTitlePage}{true}}
+{
+	\newcommand{\bcol}{DENcol}
+	\newcommand{\tcol}{white}
+}{
+	\newcommand{\bcol}{white}
+	\newcommand{\tcol}{black}
+}
+
+\thispagestyle{empty}
+%
+%====== Create Sizes For Title what so ever ====== %
+\newcommand{\MainTitlesize}{\bf\fontsize{24}{24}\selectfont}
+\newcommand{\SubTitlesize}{\bf\fontsize{16}{16}\selectfont}
+\newcommand{\Namesize}{\bf\fontsize{14}{14}\selectfont}
+%
+
+
+% \input{titlepage/titlepage_report}
+\input{titlepage/titlepage}
+
+\renewcommand{\familydefault}{\WorkingFont}
+\normalfont
+
+
+\newpage	

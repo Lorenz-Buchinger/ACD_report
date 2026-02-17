@@ -1,0 +1,347 @@
+\section{ADC-Driver And Anti-aliasing Filter}
+
+\subsection{Task Description}
+    A single-ended to differential driver for the AD7626 ADC was designed using the LM4562 dual operational amplifier. 
+    The circuit includes a second-order active low-pass filter (100 Hz – 40 kHz) with a total differential gain of 20 and a DC offset of 1 V at both outputs.
+    
+    The circuit was simulated in PSpice (Bode plot, time-domain response and output noise), implemented on a prototype board, and experimentally characterized. 
+    Magnitude and phase response, step response, and differential output signals were measured and compared with the simulation results.
+    
+    Finally, the SNR and ENOB were calculated for a full-scale ADC input signal.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        $C_1$ & \SI{150}{pF} \\ \hline
+        $C_2$ & \SI{4,7}{nF} \\ \hline
+        $f_{cl}$ & \SI{100}{Hz} \\ \hline
+        $f_{cu}$ & \SI{40}{kHz} \\ \hline
+        $A_0$ & 20 \\ \hline
+    \end{tabular}
+    \caption{Given values.}
+    \label{tab:placeholder}
+\end{table}
+
+\subsection{Schematic}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img//e_lab_2/schematic-2_3.png}
+        \caption{Schematic of the ADC driver with anti-aliasing filter}
+        \label{fig:Schematic-2_3}
+    \end{figure}
+
+%In figure \ref{fig:17} you can see whatever.
+
+\subsection{Formulas and Calculations}
+    To calculate the component values the general transfer function for 
+    
+    \begin{align}
+        H(s)=\frac{H_0}{1+a \cdot s+b \cdot s^2} \label{eq:tf_lp_gen}
+    \end{align}
+    
+    \begin{align}
+        H(P)=-\frac{\dfrac{R_2}{R_1}}{1+\omega_c C_1\left(R_2+R_3+\dfrac{R_2 R_3}{R_1}\right) P+\omega_c^2 C_1 C_2 R_2 R_3 P^2} \label{eq:tf_mf_lp}
+    \end{align}
+    
+    \begin{align}
+        & H_0 = -\frac{R_2}{R_1} \\
+        & a = \omega_c C_1\left(R_2+R_3+\dfrac{R_2 R_3}{R_1}\right) \\
+        & b = \omega_c^2 C_1 C_2 R_2 R_3 \\
+        & P = \frac{s}{\omega_c}
+    \end{align}
+    
+    The decision was made to use a Butterworth characteristic for the second order multi-feedback filter. The values for a and b for a Butterworth filter are as follows:
+    
+    \begin{align}
+        & a = \sqrt{2} \\
+        & b = 1
+    \end{align}
+    
+    $\omega_c$ is calculated according to equation \ref{eq:w_c}.
+    
+    \begin{align}
+        \omega_c = 2\pi f_{cu} = 2\pi \cdot \SI{40}{kHz} = 251 \cdot 10^3 s^{-1} \label{eq:w_c}
+    \end{align}
+    
+    \subsubsection{SNR and ENOB Calculation of the ADC Driver System}
+    
+    The system consists of a single-ended to differential driver implemented with the LM4562 operational amplifier, followed by the AD7626 16-bit ADC. The total system performance is limited by both the ADC quantization noise and the analog front-end noise.
+    
+    \subsubsection{Ideal ADC SNR}
+    
+    For an ideal N-bit ADC with a full-scale sinusoidal input, the theoretical
+    Signal-to-Noise Ratio (SNR) is given by:
+    
+    \begin{equation}
+    SNR_{ideal} = 6.02N + 1.76 \,\, [dB]
+    \end{equation}
+    
+    For a 16-bit ADC:
+    
+    \begin{equation}
+    SNR_{ideal} = 6.02 \cdot 16 + 1.76 = 98.08 \, dB
+    \end{equation}
+    
+    This value represents the quantization noise limit only.
+    
+    \subsubsection{Real ADC SNR (Datasheet Value)}
+    
+    According to the AD7626 datasheet, the typical SNR for a full-scale sine wave is:
+    
+    \begin{equation}
+    SNR_{ADC} \approx 95 \, dB
+    \end{equation}
+    
+    This value includes internal non-idealities and thermal noise.
+    
+    \subsubsection{Analog Driver Signal Level}
+    
+    The input signal to the driver is:
+    
+    \begin{equation}
+    V_{in,pp} = 100 \, mV
+    \end{equation}
+    
+    The differential gain of the driver is:
+    
+    \begin{equation}
+    A_{diff} = 20
+    \end{equation}
+    
+    Therefore, the peak-to-peak voltage at the ADC input is:
+    
+    \begin{equation}
+    V_{out,pp} = A_{diff} \cdot V_{in,pp} = 20 \cdot 0.1 = 2 \, V
+    \end{equation}
+    
+    \subsubsection{RMS Signal Value at the ADC Input}
+    
+    For a sinusoidal signal:
+    
+    \begin{equation}
+    V_{signal,RMS} = \frac{V_{pp}}{2\sqrt{2}} = \frac{2}{2\sqrt{2}} = \frac{2}{2.828} = 0.707 \, V
+    \end{equation}
+    
+    \subsubsection{RMS Noise Voltage of the Driver}
+    
+    From PSpice noise simulation over the bandwidth
+    (100 Hz -- 40 kHz):
+    
+    \begin{equation}
+    V_{noise,RMS} = 40.7 \, \mu V
+    \end{equation}
+    
+    \subsubsection{Driver SNR}
+    
+    \begin{equation}
+    SNR_{driver} = \frac{V_{signal,RMS}}{V_{noise,RMS}} = \frac{0.707}{40.7 \times 10^{-6}} = 17375
+    \end{equation}
+    
+    
+    In decibels:
+    
+    \begin{equation}
+    SNR_{driver,dB} = 20 \log_{10}(17375) = 84.8 \, dB
+    \end{equation}
+    
+    
+    \subsubsection{Total System SNR}
+    
+    Since ADC noise and driver noise are uncorrelated,
+    they must be combined in linear scale:
+    
+    \begin{equation}
+    \frac{1}{SNR_{total}} =
+    \frac{1}{SNR_{ADC}} +
+    \frac{1}{SNR_{driver}}
+    \end{equation}
+    
+    First, convert both SNR values to linear scale:
+    
+    \begin{equation}
+    SNR_{ADC,lin} = 10^{95/10} = 3.16 \times 10^9
+    \end{equation}
+    
+    \begin{equation}
+    SNR_{driver,lin} = 10^{84.8/10} = 3.02 \times 10^8
+    \end{equation}
+    
+    
+    Combine both contributions:
+    
+    \begin{equation}
+    \frac{1}{SNR_{total,lin}} =
+    \frac{1}{3.16 \times 10^9} +
+    \frac{1}{3.02 \times 10^8}
+    \end{equation}
+    
+    \begin{equation}
+    SNR_{total,lin} \approx 2.76 \times 10^8
+    \end{equation}
+    
+    Convert back to decibels:
+    
+    \begin{equation}
+    SNR_{total,dB} =
+    10 \log_{10}(2.76 \times 10^8) = 84.4 \, dB
+    \end{equation}
+    
+    \subsubsection{Effective Number of Bits (System)}
+    
+    \begin{equation}
+    ENOB =
+    \frac{SNR_{total,dB} - 1.76}{6.02} = \frac{84.4 - 1.76}{6.02} = \frac{82.64}{6.02} = 13.7 \, bits
+    \end{equation}
+
+
+\subsection{Table(s) with Measurement Results}
+    \begin{table}[H]
+        \centering
+        \caption{Component values for ADC driver and anti-aliasing filter}
+        \begin{tabular}{c!{\vrule width 2pt}c!{\vrule width 2pt}c!{\vrule width 2pt}c|}
+            \cline{2-4}
+             & \textbf{Calculated} & \textbf{Chosen} & \textbf{Measured} 
+            \\ \noalign{\hrule height 2pt}
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_1$ in \textohm} & - & 820 & 817 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_2$ in k\textohm} & - & 8.2 & 8.1602 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_3$ in k\textohm} & - & 2.7 & 2.6888 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_4$ in k\textohm} & 10 & 10 & 9.8642 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_5$ in k\textohm} & 10 & 10 & 9.8666 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_1$ in pF} & - & 150 & 155 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_2$ in nF} & - & 4.7 & 4.61 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_3$ in \textmu F} & - & 1.5 & 1.56 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_4$ in nF} & - & 100 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_5$ in \textmu F} & - & 10 & - \\ \hline
+        \end{tabular}
+        \label{tab:adc_driver_components}
+    \end{table}
+    The measured resistor deviations are within the expected 1\% tolerance range. 
+    The small deviations of the RC components slightly influence the cutoff frequency of the anti-aliasing filter, but remain within acceptable limits. 
+    The measured capacitance variation of C1 (150 pF → 155 pF) leads to a minor shift of the pole frequency.
+    \begin{longtable}{|c|c|c|}
+        \caption{\centering Measured frequency response}
+        \label{tab:frequency_response} \\
+        \hline
+        \textbf{Frequency / Hz} & \textbf{Gain / dB} & \textbf{Phase / Degree} \\
+        \hline
+        \endfirsthead
+    
+        \caption[]{\centering Measured frequency response (continuation)} \\
+        \hline
+        \textbf{Frequency / Hz} & \textbf{Gain / dB} & \textbf{Phase / Degree} \\
+        \hline
+        \endhead
+    
+        \hline
+        \endfoot
+    
+        \hline
+        \endlastfoot
+    
+        3      & -6.80 & 80  \\
+        7      & 0.40  & 85  \\
+        10     & 3.40  & 87  \\
+        20     & 9.30  & 80  \\
+        40     & 15.00 & 73  \\
+        50     & 16.80 & 69  \\
+        60     & 18.10 & 66  \\
+        70     & 19.20 & 61  \\
+        80     & 20.10 & 59  \\
+        90     & 20.90 & 56  \\
+        100    & 21.50 & 54  \\
+        110    & 22.00 & 51  \\
+        120    & 22.40 & 48  \\
+        130    & 22.80 & 46  \\
+        135    & 23.00 & 45  \\
+        140    & 23.10 & 44  \\
+        150    & 23.40 & 42  \\
+        160    & 23.70 & 40  \\
+        170    & 23.90 & 38  \\
+        180    & 24.10 & 36  \\
+        190    & 24.20 & 35  \\
+        200    & 24.40 & 34  \\
+        210    & 24.50 & 33  \\
+        220    & 24.60 & 31  \\
+        230    & 24.70 & 30  \\
+        240    & 24.80 & 29  \\
+        260    & 25.00 & 27  \\
+        280    & 25.10 & 25  \\
+        300    & 25.20 & 24  \\
+        330    & 25.40 & 22  \\
+        350    & 25.40 & 20  \\
+        400    & 25.60 & 18  \\
+        450    & 25.70 & 16  \\
+        500    & 25.80 & 14  \\
+        600    & 25.80 & 10  \\
+        750    & 25.90 & 8   \\
+        825    & 25.90 & 7   \\
+        1000   & 26.00 & 6   \\
+        1250   & 26.00 & 4   \\
+        1500   & 26.00 & 2   \\
+        1750   & 26.00 & 0   \\
+        2250   & 26.00 & -1  \\
+        2500   & 26.00 & -2  \\
+        2750   & 26.00 & -3  \\
+        3000   & 26.00 & -4  \\
+        3500   & 26.00 & -5  \\
+        6000   & 26.00 & -11 \\
+        10000  & 25.90 & -18 \\
+        11000  & 25.90 & -21 \\
+        12000  & 25.90 & -23 \\
+        13000  & 25.80 & -28 \\
+        14000  & 25.80 & -30 \\
+        15000  & 25.80 & -31 \\
+        16000  & 25.70 & -34 \\
+        17000  & 25.70 & -35 \\
+        18000  & 25.60 & -37 \\
+        19000  & 25.60 & -40 \\
+        20000  & 25.50 & -42 \\
+        22000  & 25.40 & -48 \\
+        24000  & 25.20 & -54 \\
+        26000  & 25.00 & -56 \\
+        28000  & 24.70 & -60 \\
+        30000  & 24.40 & -66 \\
+        32000  & 24.10 & -72 \\
+        33000  & 24.00 & -75 \\
+        34000  & 23.80 & -75 \\
+        35000  & 23.60 & -78 \\
+        37000  & 23.20 & -80 \\
+        38000  & 23.00 & -83 \\
+        39000  & 22.80 & -84 \\
+        40000  & 22.60 & -86 \\
+        45000  & 21.50 & -93 \\
+        50000  & 20.40 & -106 \\
+        55000  & 19.20 & -109 \\
+        60000  & 18.00 & -114 \\
+        65000  & 16.90 & -120 \\
+        70000  & 15.50 & -122 \\
+        75000  & 14.50 & -125 \\
+        100000 & 9.90  & -130 \\
+        120000 & 6.80  & -140 \\
+        150000 & 3.30  & -156 \\
+        190000 & 0.00  & -180 \\
+        200000 & -1.00 & -180 \\
+    
+    \end{longtable}
+
+    The measured response shows a constant gain of approximately 26 dB within the passband. 
+    The phase shift approaches \SI{-180}{\deg} at high frequencies, which confirms the expected second-order low-pass behavior.
+    The cutoff frequency can be determined from the \SI{-3}{dB} drop relative to the mid-band gain.
+
+\subsection{Curves \& Diagrams}
+
+
+\subsection{Discussion of Measurement Results}
+    Although the AD7626 is a 16-bit ADC with an ideal SNR of 98.08 dB,
+    the system performance is limited by the analog driver noise.
+    For the selected input amplitude (2 Vpp at the ADC input),
+    the overall system achieves:
+    
+    \begin{itemize}
+    \item $SNR_{total} = 84.4 \, dB$
+    \item $ENOB = 13.7 \, bits$
+    \end{itemize}
+    
+    Therefore, the effective resolution is reduced due to analog front-end noise
+    and the fact that the ADC full-scale range is not fully utilized.

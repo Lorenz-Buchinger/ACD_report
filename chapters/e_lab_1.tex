@@ -1,0 +1,219 @@
+\chapter{Electronic Lab}
+
+\section{Active Band-pass Filter}
+
+\subsection{Task Description}
+
+    A second-order active bandpass filter was designed using the LM4562 dual operational amplifier by cascading two staggered tuned first-order bandpass stages in multi-feedback topology. 
+    The transfer function and component values were calculated manually according to the given specifications (Butterworth and 1 dB Chebyshev, 4–5 kHz, 20 dB gain), using E24 components with 1% tolerance.
+    
+    The circuit was simulated in PSpice (transient, AC, noise and Monte Carlo analysis), implemented on a prototype board with ±5 V supply, and experimentally characterized. 
+    Frequency response, passband gain, 3 dB corner frequencies and step response were measured and compared with simulation results in a combined Bode plot.
+    
+    Finally, the output noise behavior was analyzed and discussed in the report.
+
+\subsection{Schematic}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{img//e_lab_1/schematic-2_2.png}
+        \caption{ Schematic of the second order band pass filter.}
+        \label{fig:Schematic-2_2}
+    \end{figure}
+
+\subsection{Formulas and Calculations}
+    The calculations were done by hand. A scan of the hand written notes can be found in section \ref{sec:calc_active_band_pass} of the appendix
+ 
+\subsection{Table(s) with Measurement Results}
+    \begin{table}[H]
+        \centering
+        \caption{Component values for Butterworth band-pass filter}
+        \begin{tabular}{c!{\vrule width 2pt}c!{\vrule width 2pt}c!{\vrule width 2pt}c|}
+            \cline{2-4}
+             & \textbf{Calculated} & \textbf{Chosen} & \textbf{Measured} 
+            \\ \noalign{\hrule height 2pt}
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_1$ in k\textohm} & 5.448 & 5.6 & 5.5831 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_2$ in k\textohm} & 48.880 & 47 & 46.943 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_3$ in \textohm} & 303.59 & 300 & 298.59 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_4$ in k\textohm} & 4.650 & 4.7 & 4.6045 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_5$ in k\textohm} & 41.718 & 43 & 42.798 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_6$ in \textohm} & 259.11 & 270 & 269.01 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_1$ in nF} & - & 10 & 10.03 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_2$ in nF} & - & 10 & 10.09 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_3$ in nF} & - & 10 & 10.03 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_4$ in nF} & - & 10 & 10.10 \\ \hline
+        \end{tabular}
+        \label{tab:butterworth_components}
+    \end{table}
+    
+    \begin{table}[H]
+        \centering
+        \caption{Component values for Chebyshev 1 dB band-pass filter}
+        \begin{tabular}{c!{\vrule width 2pt}c!{\vrule width 2pt}c!{\vrule width 2pt}c|}
+            \cline{2-4}
+             & \textbf{Calculated} & \textbf{Chosen} & \textbf{Measured} 
+            \\ \noalign{\hrule height 2pt}
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_1$ in k\textohm} & 7.532 & 7.5 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_2$ in k\textohm} & 124.641 & 120 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_3$ in \textohm} & 117.89 & 120 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_4$ in k\textohm} & 6.492 & 6.2 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_5$ in k\textohm} & 107.432 & 110 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$R_6$ in \textohm} & 101.613 & 100 & - \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_1$ in nF} & - & 10 & 10.03 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_2$ in nF} & - & 10 & 10.09 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_3$ in nF} & - & 10 & 10.03 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{$C_4$ in nF} & - & 10 & 10.10 \\ \hline
+        \end{tabular}
+        \label{tab:chebyshev_components}
+    \end{table}
+    The measured resistor values show deviations below 1\% with respect to the nominal chosen E24 values, which confirms the specified tolerance class. 
+    The capacitor measurements also confirm the 1\% NP0 specification and therefore only introduce minor shifts in the center frequency.
+    
+    \begin{longtable}{|c|c|c|c|}
+        \caption{\centering Measured frequency response of band-pass filter}
+        \label{tab:bode_measurements} \\
+        \hline
+        \textbf{Frequency / Hz} & \textbf{Gain / dB} & \textbf{Phase / Degree} & \textbf{Remark} \\
+        \hline
+        \endfirsthead
+    
+        \caption[]{\centering Measured frequency response of band-pass filter (continuation)} \\
+        \hline
+        \textbf{Frequency / Hz} & \textbf{Gain / dB} & \textbf{Phase / Degree} & \textbf{Remark} \\
+        \hline
+        \endhead
+    
+        \hline
+        \endfoot
+    
+        \hline
+        \endlastfoot
+    
+        1      & -47    & -     &  \\
+        10     & -45    & -     &  \\
+        100    & -45    & -     &  \\
+        1000   & -32    & -     &  \\
+        1100   & -30    & 170   &  \\
+        1200   & -29.4  & 165   &  \\
+        1300   & -27.9  & 165   &  \\
+        1400   & -25.8  & 162   &  \\
+        1500   & -24.3  & 160   &  \\
+        2000   & -17.6  & 164   &  \\
+        2600   & -10    & 164   &  \\
+        3000   & -4.3   & 158   &  \\
+        3300   & 0.2    & 152   &  \\
+        3400   & 1.9    & 148   &  \\
+        3500   & 3.6    & 145   &  \\
+        3600   & 5.5    & 142   &  \\
+        3700   & 7.4    & 136   &  \\
+        3800   & 9.5    & 130   &  \\
+        3900   & 11.7   & 123   &  \\
+        4000   & 14.2   & 112   &  \\
+        4100   & 16.5   & 100   &  \\
+        4200   & 18.7   & 82    & \textbf{-3 dB region} \\
+        4230   & 19.3   & 76    & \textbf{-3 dB region} \\
+        4300   & 20.5   & 62    & \textbf{-3 dB region} \\
+        4400   & 21.6   & 39    &  \\
+        4472.13 & 22.1  & 22    & \textbf{Theoretical $f_c$} \\
+        4500   & 22.2   & 16    &  \\
+        4570   & 22.3   & 0     & \textbf{Measured $f_c$} \\
+        4600   & 22.3   & -6    &  \\
+        4700   & 22     & -28   &  \\
+        4800   & 21.2   & -50   &  \\
+        4900   & 19.9   & -70   & \textbf{-3 dB region} \\
+        4940   & 19.3   & -76   & \textbf{-3 dB region} \\
+        5000   & 18.2   & -86   & \textbf{-3 dB region} \\
+        5100   & 16.4   & -100  &  \\
+        5200   & 14.5   & -110  &  \\
+        5300   & 12.7   & -119  &  \\
+        5400   & 11     & -126  &  \\
+        5500   & 9.4    & -131  &  \\
+        5600   & 8      & -136  &  \\
+        5700   & 6.7    & -139  &  \\
+        5800   & 5.5    & -142  &  \\
+        5900   & 4.3    & -145  &  \\
+        6000   & 3.2    & -147  &  \\
+        6100   & 2.2    & -150  &  \\
+        6200   & 1.2    & -152  &  \\
+        6300   & 0.3    & -154  &  \\
+        6400   & -0.5   & -156  &  \\
+        6700   & -2.8   & -160  &  \\
+        7500   & -7.5   & -171  &  \\
+        8000   & -9.7   & -     &  \\
+        9000   & -13.3  & -     &  \\
+        10000  & -16.4  & -     &  \\
+        50000  & -32.5  & -     &  \\
+    
+    \end{longtable}
+
+\subsection{Curves \& Diagrams}
+    \begin{figure}[H]
+        \centering
+        \includesvg[inkscapelatex=false, width=0.7\linewidth]{img/e_lab_1/pic9_sine_wave}
+        \caption{\centering Transient simulation showing the sinusoidal input voltage and the output voltage of each of the two amplifier stages.}
+        \label{fig:pic_9_transient_sine}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includesvg[inkscapelatex=false, width=0.7\linewidth]{img/e_lab_1/pic10_step_response}
+        \caption{\centering Transient simulation showing the step response of both amplifier stages after applying a signal transitioning from \SI{0}{V} to \SI{1}{V} to the input.}
+        \label{fig:pic_10_step_response}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includesvg[inkscapelatex=false, width=0.7\linewidth]{img/e_lab_1/pic11_noise_density}
+        \caption{\centering Simulation results of the noise spectral voltage density.}
+        \label{fig:pic_11_noise_density}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includesvg[inkscapelatex=false, width=0.7\linewidth]{img/e_lab_1/pic12_total_noise}
+        \caption{\centering Simulation results of the total output noise voltage.}
+        \label{fig:pic_12_total_noise}
+    \end{figure}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png}
+        \caption{\centering Monte Carlo simulation of the \SI{3}{db} bandwidth. \SI{1}{\%} tolerances were used for both resistors and capacitors.}
+        \label{fig:pic_13_monte_carlo_3db}
+    \end{figure}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{img/e_lab_1/pic14_monte_carlo_center_frequency_20db.png}
+        \caption{\centering Monte Carlo simulation of the center frequency. \SI{1}{\%} tolerances were used for both resistors and capacitors.}
+        \label{fig:pic_14_monte_carlo_center_frequency}
+    \end{figure}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png}
+        \caption{\centering Monte Carlo simulation of the gain variation. \SI{1}{\%} tolerances were used for both resistors and capacitors.}
+        \label{fig:pic_15_monte_carlo_gain}
+    \end{figure}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{img//e_lab_1/Picture 16-f0-max.png}
+        \caption{Measurement of the passband gain.}
+        \label{fig:pic_16_passband_gain}
+    \end{figure}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{img//e_lab_1/Picture 17.png}
+        \caption{Measurement of the filters step response. A \SI{0,5}{V} square wave was used as the step function.}
+        \label{fig:pic_17_step_response}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includesvg[inkscapelatex=false, width=1\linewidth]{img/e_lab_1/pic11_bode}
+        \caption{\centering Bode plot displaying both simulated and measured values.}
+        \label{fig:pic_11_bode}
+    \end{figure}
+
+\subsection{Discussion of Measurement Results}
