@@ -1,3 +1,4 @@
+\newpage
 \section{Switched Capacitor Filter}
 
 \subsection{Task Description}
@@ -72,119 +73,13 @@
     The measured resistor values confirm the 1\% tolerance specification. 
     Since the switched capacitor filter cutoff frequency is defined by the clock frequency rather than absolute capacitor values, the passive component tolerances have only minor influence on the filter characteristics.
     
-    \begin{longtable}{|c|c|c|}
-        \caption{\centering Measured frequency response of switched capacitor filter (CLK = 1 MHz)}
-        \label{tab:sc_filter_clk1MHz} \\
-        \hline
-        \textbf{Input Frequency / Hz} & \textbf{Gain / dB} & \textbf{Phase / Degree} \\
-        \hline
-        \endfirsthead
     
-        \caption[]{\centering Measured frequency response of switched capacitor filter (CLK = 1 MHz, continuation)} \\
-        \hline
-        \textbf{Input Frequency / Hz} & \textbf{Gain / dB} & \textbf{Phase / Degree} \\
-        \hline
-        \endhead
-    
-        \hline
-        \endfoot
-    
-        \hline
-        \endlastfoot
-    
-        1      & 40.2 & 1.33  \\
-        10     & 40.2 & 0     \\
-        50     & 40.2 & 0     \\
-        100    & 40.2 & 0     \\
-        300    & 40.2 & -5    \\
-        500    & 40.2 & -10   \\
-        1000   & 40.1 & -18   \\
-        2000   & 40.0 & -30   \\
-        3000   & 39.9 & -50   \\
-        4000   & 39.7 & -70   \\
-        5000   & 39.3 & -90   \\
-        6000   & 39.0 & -100  \\
-        7000   & 38.6 & -120  \\
-        8000   & 38.2 & -135  \\
-        9000   & 37.8 & -160  \\
-        10000  & 37.2 & 180   \\
-        11000  & 36.6 & 160   \\
-        12000  & 35.8 & 140   \\
-        13000  & 35.0 & 120   \\
-        14000  & 34.0 & 100   \\
-        15000  & 33.0 & 84    \\
-        16000  & 31.8 & 68    \\
-        17000  & 30.7 & 50    \\
-        18000  & 29.4 & 33    \\
-        19000  & 28.1 & 18    \\
-        20000  & 26.7 & 15    \\
-        21000  & 25.3 & -18   \\
-        22000  & 23.6 & -30   \\
-        23000  & 21.7 & -50   \\
-        24000  & 19.7 & -60   \\
-        25000  & 17.5 & -85   \\
-        30000  & 6.7  & -120  \\
-        40000  & -6.0 & -150  \\
-    
-    \end{longtable}
     % The switched capacitor filter shows a flat passband gain of approximately 40 dB. 
     % The phase shift increases progressively until reaching −90° around 5 kHz, which indicates the dominant pole region. 
     % A phase discontinuity near 10 kHz can be observed due to phase wrapping (±180° representation). 
     % The cutoff frequency is determined at the −3 dB point relative to the passband gain.
     
-    \begin{longtable}{|c|c|c|}
-        \caption{\centering Measured frequency response of switched capacitor filter (CLK = 500 kHz)}
-        \label{tab:sc_filter_clk500kHz} \\
-        \hline
-        \textbf{Input Frequency / Hz} & \textbf{Gain / dB} & \textbf{Phase / Degree} \\
-        \hline
-        \endfirsthead
-    
-        \caption[]{\centering Measured frequency response of switched capacitor filter (CLK = 500 kHz, continuation)} \\
-        \hline
-        \textbf{Input Frequency / Hz} & \textbf{Gain / dB} & \textbf{Phase / Degree} \\
-        \hline
-        \endhead
-    
-        \hline
-        \endfoot
-    
-        \hline
-        \endlastfoot
-    
-        1      & 40.2 & 1.4   \\
-        10     & 40.2 & 0     \\
-        50     & 40.2 & 0     \\
-        100    & 40.2 & 0     \\
-        300    & 40.2 & -10   \\
-        500    & 40.1 & -18   \\
-        700    & 40.1 & -25   \\
-        1000   & 40.0 & -37   \\
-        1500   & 39.9 & -56   \\
-        2000   & 39.6 & -70   \\
-        2500   & 39.3 & -90   \\
-        3000   & 39.0 & -110  \\
-        3500   & 38.6 & -128  \\
-        4000   & 38.2 & -145  \\
-        4500   & 37.7 & -164  \\
-        5000   & 37.2 & 180   \\
-        5500   & 36.5 & 160   \\
-        6000   & 35.8 & 140   \\
-        6500   & 34.9 & 122   \\
-        7000   & 34.0 & 100   \\
-        7500   & 32.8 & 85    \\
-        8000   & 31.8 & 70    \\
-        9000   & 29.5 & 35    \\
-        10000  & 26.7 & 0     \\
-        11000  & 23.6 & -33   \\
-        12000  & 19.6 & -70   \\
-        13000  & 15.3 & -90   \\
-        14000  & 11.0 & -115  \\
-        15000  & 7.1  & -136  \\
-        16000  & 3.2  & -150  \\
-        17000  & -0.4 & -160  \\
-    
-    \end{longtable}
+    The measurements for the bode plot can be found at the appendix in table \ref{tab:sc_filter_clk500kHz} and \ref{tab:sc_filter_clk1MHz}.
     
     When reducing the clock frequency from 1 MHz to 500 kHz, the cutoff frequency of the switched capacitor filter decreases proportionally. 
     This confirms the theoretical relationship:
@@ -197,5 +92,32 @@
     Phase wrapping at ±180° is again visible due to measurement representation.
 
 \subsection{Curves \& Diagrams}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{img/e_lab_3/picture_22.png}
+        \caption{\centering Output (blue) of the switched capacitor filter with the input frequency near the tuning frequency.}
+        \label{fig:pic_22_output_near_clk}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{img/e_lab_3/picture_23.png}
+        \caption{\centering Close up of the switched-capacitor filters output signal. Each step is one switching operation of the capacitors.}
+        \label{fig:pic_23_output_close_up}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\linewidth]{img/e_lab_4/picture_24_Rg_GND.png}
+        \caption{\centering Measurement of the total output noise voltage with the input shorted to ground and the SC-filter tuning frequency set to \SI{1}{MHz}.}
+        \label{fig:pic_24_output_noise_measurement}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includesvg[inkscapelatex=false, width=1\linewidth]{img/e_lab_3/EL3_bode3}
+        \caption{\centering Bode plot displaying measured phase and magnitude responses of the switched capacitor filter, one with a tuning frequency of \SI{1}{MHz}, one with a tuning frequency of \SI{500}{kHz}.}
+        \label{fig:bode_3}
+    \end{figure}
 
 \subsection{Discussion of Measurement Results}
