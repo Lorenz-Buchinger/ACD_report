@@ -90,7 +90,7 @@
     According to the AD7626 datasheet, the typical SNR for a full-scale sine wave is:
     
     \begin{equation}
-    SNR_{ADC} \approx 95 \, dB
+    SNR_{ADC} \approx 91.5 \, dB
     \end{equation}
     
     This value includes internal non-idealities and thermal noise.
@@ -160,7 +160,7 @@
     First, convert both SNR values to linear scale:
     
     \begin{equation}
-    SNR_{ADC,lin} = 10^{95/10} = 3.16 \times 10^9
+    SNR_{ADC,lin} = 10^{91.5/10} = 1.41 \times 10^9
     \end{equation}
     
     \begin{equation}
@@ -172,26 +172,26 @@
     
     \begin{equation}
     \frac{1}{SNR_{total,lin}} =
-    \frac{1}{3.16 \times 10^9} +
+    \frac{1}{1.41 \times 10^9} +
     \frac{1}{3.02 \times 10^8}
     \end{equation}
     
     \begin{equation}
-    SNR_{total,lin} \approx 2.76 \times 10^8
+    SNR_{total,lin} \approx 2.48 \times 10^8
     \end{equation}
     
     Convert back to decibels:
     
     \begin{equation}
     SNR_{total,dB} =
-    10 \log_{10}(2.76 \times 10^8) = 84.4 \, dB
+    10 \log_{10}(2.48 \times 10^8) = 83.95 \, dB
     \end{equation}
     
     \subsubsection{Effective Number of Bits (System)}
     
     \begin{equation}
     ENOB =
-    \frac{SNR_{total,dB} - 1.76}{6.02} = \frac{84.4 - 1.76}{6.02} = \frac{82.64}{6.02} = 13.7 \, bits
+    \frac{SNR_{total,dB} - 1.76}{6.02} = \frac{83.95 - 1.76}{6.02} = \frac{82.19}{6.02} = 13.65 \, bits
     \end{equation}
 
 
@@ -251,7 +251,7 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=1\linewidth, trim=0 2cm 0 0, clip]{img/e_lab_2/pic-20.png}
+        \includegraphics[width=1\linewidth, trim=0 2cm 0 0, clip]{img/e_lab_2/pic-20-v3.png}
         \caption{\centering Measurements of input signal (yellow), the non-inverting (blue) and inverting (green) output and the differential output (magenta).}
         \label{fig:pic_20_passband_gain}
     \end{figure}
@@ -271,15 +271,31 @@
     \end{figure}
 
 \subsection{Discussion of Measurement Results}
-    Although the AD7626 is a 16-bit ADC with an ideal SNR of 98.08 dB,
-    the system performance is limited by the analog driver noise.
-    For the selected input amplitude (2 Vpp at the ADC input),
-    the overall system achieves:
+
+
+As we can observe in Figure \ref{fig:pic_20_passband_gain}, the driver correctly amplifies the input signal, providing a differential gain of approximately 20 (26 dB) in the passband.  
+
+\noindent The step response (Figure \ref{fig:pic_21_step_response}) shows a typical second-order filter behavior, with an adequate rise time and no significant overshoot.  
+
+\noindent The comparison between simulation and measurements in the Bode diagram (Figure \ref{fig:bode_2}) shows good agreement, confirming that the design meets the frequency and gain specifications.  
+
+\noindent Small deviations in the component values do not significantly affect the system performance, and the anti-aliasing filter fulfills its function of attenuating frequencies above 40 kHz, protecting the ADC from possible aliasing.  
+
+\noindent Additionally, it is observed that the total noise at the driver output is approximately \SI{40.7}{\micro\volt} RMS, which contributes to the limitation of the total system SNR.  
+
+\noindent Obtaining a total SNR of 83.95 dB, the system is capable of achieving an effective resolution of approximately 13.65 bits, which is suitable for many data acquisition applications, although it does not fully exploit the theoretical 16-bit capability of the ADC.  
+
+\noindent In conclusion, if we wanted to use the full resolution of the ADC, it would be necessary to reduce the driver noise or increase the amplitude of the input signal in order to better utilize the ADC dynamic range.
+
+    % Although the AD7626 is a 16-bit ADC with an ideal SNR of 98.08 dB,
+    % the system performance is limited by the analog driver noise.
+    % For the selected input amplitude (2 Vpp at the ADC input),
+    % the overall system achieves:
     
-    \begin{itemize}
-    \item $SNR_{total} = 84.4 \, dB$
-    \item $ENOB = 13.7 \, bits$
-    \end{itemize}
+    % \begin{itemize}
+    % \item $SNR_{total} = 83.95 \, dB$
+    % \item $ENOB = 13.65 \, bits$
+    % \end{itemize}
     
-    Therefore, the effective resolution is reduced due to analog front-end noise
-    and the fact that the ADC full-scale range is not fully utilized.
+    % Therefore, the effective resolution is reduced due to analog front-end noise
+    % and the fact that the ADC full-scale range is not fully utilized.
