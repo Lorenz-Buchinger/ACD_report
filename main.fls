@@ -749,10 +749,10 @@ INPUT .\img\\e_lab_1\schematic-2_2.png
 INPUT .\img\\e_lab_1\schematic-2_2.png
 INPUT .\img\\e_lab_1\schematic-2_2.png
 INPUT .\img\\e_lab_1\schematic-2_2.png
+INPUT C:\Users\conta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\conta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
 INPUT C:\Users\conta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
 INPUT C:\Users\conta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
-INPUT C:\Users\conta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT .\img\e_lab_1\pic9_sine_wave.svg
 INPUT .\img\e_lab_1\pic9_sine_wave.svg
 INPUT .\img\e_lab_1\pic9_sine_wave.svg
@@ -807,13 +807,6 @@ INPUT .\img\e_lab_1\pic13_monte_carlo_3db_bandwidth.png
 INPUT .\img\e_lab_1\pic13_monte_carlo_3db_bandwidth.png
 INPUT .\img\e_lab_1\pic13_monte_carlo_3db_bandwidth.png
 INPUT .\img\e_lab_1\pic13_monte_carlo_3db_bandwidth.png
-INPUT .\img\\e_lab_1\Picture 16-f0-max.png
-INPUT .\img\\e_lab_1\Picture 16-f0-max.png
-INPUT .\img\\e_lab_1\Picture 16-f0-max.png
-INPUT .\img\\e_lab_1\Picture 16-f0-max.png
-INPUT .\img\\e_lab_1\Picture 16-f0-max.png
-INPUT .\img\\e_lab_1\Picture 16-f0-max.png
-INPUT .\img\\e_lab_1\Picture 16-f0-max.png
 INPUT .\img\\e_lab_1\Picture 17.png
 INPUT .\img\\e_lab_1\Picture 17.png
 INPUT .\img\\e_lab_1\Picture 17.png
@@ -821,6 +814,13 @@ INPUT .\img\\e_lab_1\Picture 17.png
 INPUT .\img\\e_lab_1\Picture 17.png
 INPUT .\img\\e_lab_1\Picture 17.png
 INPUT .\img\\e_lab_1\Picture 17.png
+INPUT .\img\\e_lab_1\Picture 16-f0-max.png
+INPUT .\img\\e_lab_1\Picture 16-f0-max.png
+INPUT .\img\\e_lab_1\Picture 16-f0-max.png
+INPUT .\img\\e_lab_1\Picture 16-f0-max.png
+INPUT .\img\\e_lab_1\Picture 16-f0-max.png
+INPUT .\img\\e_lab_1\Picture 16-f0-max.png
+INPUT .\img\\e_lab_1\Picture 16-f0-max.png
 INPUT .\img\e_lab_1\pic11_bode.svg
 INPUT .\img\e_lab_1\pic11_bode.svg
 INPUT .\img\e_lab_1\pic11_bode.svg
