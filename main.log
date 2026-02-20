@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.17)  18 FEB 2026 23:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.17)  19 FEB 2026 12:46
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1586,12 +1586,12 @@ LaTeX Font Info:    Font shape `T1/qag/bx/n' in size <80> not available
 <img//c_lab_1/pic_5_emitter_schematic.png, id=211, 802.49812pt x 426.84468pt>
 File: img//c_lab_1/pic_5_emitter_schematic.png Graphic file (type png)
 <use img//c_lab_1/pic_5_emitter_schematic.png>
-Package pdftex.def Info: img//c_lab_1/pic_5_emitter_schematic.png  used on input line 11.
+Package pdftex.def Info: img//c_lab_1/pic_5_emitter_schematic.png  used on input line 16.
 (pdftex.def)             Requested size: 422.52054pt x 224.74161pt.
 <img//c_lab_1/pic_7_inverting_schematic.png, id=213, 868.74562pt x 371.13657pt>
 File: img//c_lab_1/pic_7_inverting_schematic.png Graphic file (type png)
 <use img//c_lab_1/pic_7_inverting_schematic.png>
-Package pdftex.def Info: img//c_lab_1/pic_7_inverting_schematic.png  used on input line 18.
+Package pdftex.def Info: img//c_lab_1/pic_7_inverting_schematic.png  used on input line 23.
 (pdftex.def)             Requested size: 422.52054pt x 180.50502pt.
  [1
 
@@ -1599,23 +1599,23 @@ Package pdftex.def Info: img//c_lab_1/pic_7_inverting_schematic.png  used on inp
 <img//c_lab_1/pic_7_non_inverting_schematic.png, id=225, 843.15pt x 487.06969pt>
 File: img//c_lab_1/pic_7_non_inverting_schematic.png Graphic file (type png)
 <use img//c_lab_1/pic_7_non_inverting_schematic.png>
-Package pdftex.def Info: img//c_lab_1/pic_7_non_inverting_schematic.png  used on input line 25.
+Package pdftex.def Info: img//c_lab_1/pic_7_non_inverting_schematic.png  used on input line 30.
 (pdftex.def)             Requested size: 422.52054pt x 244.08421pt.
 <./svg-inkscape/pic_6_emitter_noise_svg-raw.pdf, id=226, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/pic_6_emitter_noise_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pic_6_emitter_noise_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/pic_6_emitter_noise_svg-raw.pdf  used on input line 35.
+Package pdftex.def Info: ./svg-inkscape/pic_6_emitter_noise_svg-raw.pdf  used on input line 40.
 (pdftex.def)             Requested size: 526.96745pt x 395.22559pt.
  [2 <./img//c_lab_1/pic_7_inverting_schematic.png> <./img//c_lab_1/pic_7_non_inverting_schematic.png>]
 <./svg-inkscape/pic_8_inverting_noise_svg-raw.pdf, id=235, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/pic_8_inverting_noise_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pic_8_inverting_noise_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/pic_8_inverting_noise_svg-raw.pdf  used on input line 42.
+Package pdftex.def Info: ./svg-inkscape/pic_8_inverting_noise_svg-raw.pdf  used on input line 47.
 (pdftex.def)             Requested size: 526.96745pt x 395.22559pt.
 <./svg-inkscape/pic_8_non_inverting_noise_svg-raw.pdf, id=236, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/pic_8_non_inverting_noise_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pic_8_non_inverting_noise_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/pic_8_non_inverting_noise_svg-raw.pdf  used on input line 49.
+Package pdftex.def Info: ./svg-inkscape/pic_8_non_inverting_noise_svg-raw.pdf  used on input line 54.
 (pdftex.def)             Requested size: 526.96745pt x 395.22559pt.
  [3 <./svg-inkscape/pic_6_emitter_noise_svg-raw.pdf> <./svg-inkscape/pic_8_inverting_noise_svg-raw.pdf
 
@@ -1883,7 +1883,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  128i,21n,131p,2528b,1319s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro9.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qagb.pfb>
-Output written on main.pdf (47 pages, 4275890 bytes).
+Output written on main.pdf (47 pages, 4276826 bytes).
 PDF statistics:
  752 PDF objects out of 1000 (max. 8388607)
  164 named destinations out of 1000 (max. 500000)
