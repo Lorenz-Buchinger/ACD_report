@@ -151,7 +151,26 @@
         \centering
         \includesvg[inkscapelatex=false, width=1\linewidth]{img/e_lab_1/pic11_bode}
         \caption{\centering Bode plot displaying both simulated and measured values.}
-        \label{fig:pic_11_bode}
+        \label{fig:bode_1}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includesvg[inkscapelatex=false, width=0.6\linewidth]{img/e_lab_1/calculated_vs_actual_res_values}
+        \caption{\centering Simulation results of the circuits magnitude response when using calculated vs. actual resistor values.}
+        \label{fig:pic_calculated_vs_actual_res_values}
     \end{figure}
 
 \subsection{Discussion of Measurement Results}
+    While simulated and measured phase and magnitude responses show very good agreement (figure \ref{fig:bode_1}), the measured passband gain of \SI{22.3}{dB} 
+    is slightly higher than the expected \SI{20}{dB}, both in the simulated and measured results. 
+    This discrepancy is caused by the fact, that the calculated resistor values are not available as standard E24 values and therefore had to be approximated.
+    The impact of this approximation was analyzed using a PSpice simulation. The simulation results can be seen in figure \ref{fig:pic_calculated_vs_actual_res_values}
+    and show that when using the calculated resistor values, the expected passband gain of \SI{20}{dB} is achieved, while the gain is increased when using the actual measured resistor values.
+    
+    The simulation and measurements also show that the lower \SI{3}{dB} corner frequency is about \SI{300}{Hz} higher than the expected \SI{4}{kHz}, while the upper \SI{3}{dB} 
+    corner frequency deviates only slightly from the expected value of \SI{5}{kHz} (table \ref{tab:corner_and_center_frequency_gain}). The reason for this shift are the capacitors component values, which were predefined.
+    This deviation from the expected values is also visible in the monte carlo simulation of the \SI{3}{dB} bandwidth (figure \ref{fig:pic_13_monte_carlo_3db}), which shows a mean value of \SI{686}{Hz} which is about \SI{300}{Hz} lower than the expected value of \SI{1000}{Hz}.
+    The monte carlo simulation of the center frequency shows a shift of the center frequency as well. The expected center frequency is \SI{4.47}{kHz} (geometric mean) while the mean value of the monte carlo simulation is \SI{4.76}{kHz} (figure \ref{fig:pic_14_monte_carlo_center_frequency}).
+
+    To measure the output noise voltage of the circuit, the input has to be connected to ground. The output signal then has to be amplified using a suitable amplifier stage and can afterwards be measured with an oscilloscope using its RMS measurement function.

@@ -17,15 +17,15 @@
 \contentsline {subsection}{\numberline {2.2.1}Task Description}{15}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Schematic}{16}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Formulas and Calculations}{16}{subsection.2.2.3}%
-\contentsline {subsubsection}{SNR and ENOB Calculation of the ADC Driver System}{17}{subsubsection*.25}%
-\contentsline {subsubsection}{Ideal ADC SNR}{17}{subsubsection*.26}%
-\contentsline {subsubsection}{Real ADC SNR (Datasheet Value)}{18}{subsubsection*.27}%
-\contentsline {subsubsection}{Analog Driver Signal Level}{18}{subsubsection*.28}%
-\contentsline {subsubsection}{RMS Signal Value at the ADC Input}{18}{subsubsection*.29}%
-\contentsline {subsubsection}{RMS Noise Voltage of the Driver}{18}{subsubsection*.30}%
-\contentsline {subsubsection}{Driver SNR}{18}{subsubsection*.31}%
-\contentsline {subsubsection}{Total System SNR}{19}{subsubsection*.32}%
-\contentsline {subsubsection}{Effective Number of Bits (System)}{19}{subsubsection*.33}%
+\contentsline {subsubsection}{SNR and ENOB Calculation of the ADC Driver System}{17}{subsubsection*.26}%
+\contentsline {subsubsection}{Ideal ADC SNR}{17}{subsubsection*.27}%
+\contentsline {subsubsection}{Real ADC SNR (Datasheet Value)}{18}{subsubsection*.28}%
+\contentsline {subsubsection}{Analog Driver Signal Level}{18}{subsubsection*.29}%
+\contentsline {subsubsection}{RMS Signal Value at the ADC Input}{18}{subsubsection*.30}%
+\contentsline {subsubsection}{RMS Noise Voltage of the Driver}{18}{subsubsection*.31}%
+\contentsline {subsubsection}{Driver SNR}{18}{subsubsection*.32}%
+\contentsline {subsubsection}{Total System SNR}{19}{subsubsection*.33}%
+\contentsline {subsubsection}{Effective Number of Bits (System)}{19}{subsubsection*.34}%
 \contentsline {subsection}{\numberline {2.2.4}Table(s) with Measurement Results}{20}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Curves \& Diagrams}{21}{subsection.2.2.5}%
 \contentsline {subsection}{\numberline {2.2.6}Discussion of Measurement Results}{24}{subsection.2.2.6}%
@@ -36,7 +36,7 @@
 \contentsline {subsection}{\numberline {2.3.4}Table(s) with Measurement Results}{26}{subsection.2.3.4}%
 \contentsline {subsection}{\numberline {2.3.5}Curves \& Diagrams}{28}{subsection.2.3.5}%
 \contentsline {subsection}{\numberline {2.3.6}Discussion of Measurement Results}{30}{subsection.2.3.6}%
-\contentsline {chapter}{Equipment Used}{31}{chapter*.49}%
+\contentsline {chapter}{Equipment Used}{31}{chapter*.50}%
 \contentsline {chapter}{\numberline {A}Appendix}{32}{appendix.1.A}%
 \contentsline {section}{\numberline {A.1}Calculations}{33}{section.1.A.1}%
 \contentsline {subsection}{\numberline {A.1.1}Active Band-pass Filter}{33}{subsection.1.A.1.1}%
