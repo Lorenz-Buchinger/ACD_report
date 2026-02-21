@@ -33,13 +33,13 @@
 \contentsline {subsection}{\numberline {2.3.1}Task Description}{25}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Schematic}{25}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Formulas and Calculations}{26}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Table(s) with Measurement Results}{26}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Curves \& Diagrams}{28}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}Discussion of Measurement Results}{30}{subsection.2.3.6}%
-\contentsline {chapter}{Equipment Used}{31}{chapter*.49}%
-\contentsline {chapter}{\numberline {A}Appendix}{32}{appendix.1.A}%
-\contentsline {section}{\numberline {A.1}Calculations}{33}{section.1.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Active Band-pass Filter}{33}{subsection.1.A.1.1}%
-\contentsline {section}{\numberline {A.2}Matlab}{36}{section.1.A.2}%
-\contentsline {section}{\numberline {A.3}Measurements}{36}{section.1.A.3}%
+\contentsline {subsection}{\numberline {2.3.4}Table(s) with Measurement Results}{29}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Curves \& Diagrams}{31}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Discussion of Measurement Results}{34}{subsection.2.3.6}%
+\contentsline {chapter}{Equipment Used}{37}{chapter*.53}%
+\contentsline {chapter}{\numberline {A}Appendix}{38}{appendix.1.A}%
+\contentsline {section}{\numberline {A.1}Calculations}{39}{section.1.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Active Band-pass Filter}{39}{subsection.1.A.1.1}%
+\contentsline {section}{\numberline {A.2}Matlab}{42}{section.1.A.2}%
+\contentsline {section}{\numberline {A.3}Measurements}{42}{section.1.A.3}%
 \contentsfinish 
