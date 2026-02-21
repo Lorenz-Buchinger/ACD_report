@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.17)  20 FEB 2026 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.17)  20 FEB 2026 23:41
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1647,82 +1647,86 @@ Package pdftex.def Info: img//e_lab_1/schematic-2_2.png  used on input line 18.
  [6
 
 {C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc} <./img//e_lab_1/schematic-2_2.png>] [7{C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
+Overfull \hbox (27.0703pt too wide) in paragraph at lines 74--82
+ [][] 
+ []
+
 <./svg-inkscape/pic9_sine_wave_svg-raw.pdf, id=325, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/pic9_sine_wave_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pic9_sine_wave_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/pic9_sine_wave_svg-raw.pdf  used on input line 76.
+Package pdftex.def Info: ./svg-inkscape/pic9_sine_wave_svg-raw.pdf  used on input line 89.
 (pdftex.def)             Requested size: 526.96745pt x 395.22559pt.
- [8]
-<./svg-inkscape/pic10_step_response_svg-raw.pdf, id=332, 526.96875pt x 395.22656pt>
+[8]
+<./svg-inkscape/pic10_step_response_svg-raw.pdf, id=333, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/pic10_step_response_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pic10_step_response_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/pic10_step_response_svg-raw.pdf  used on input line 83.
+Package pdftex.def Info: ./svg-inkscape/pic10_step_response_svg-raw.pdf  used on input line 96.
 (pdftex.def)             Requested size: 526.96745pt x 395.22559pt.
-<./svg-inkscape/pic11_noise_density_svg-raw.pdf, id=333, 526.96875pt x 395.22656pt>
+<./svg-inkscape/pic11_noise_density_svg-raw.pdf, id=334, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/pic11_noise_density_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pic11_noise_density_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/pic11_noise_density_svg-raw.pdf  used on input line 90.
+Package pdftex.def Info: ./svg-inkscape/pic11_noise_density_svg-raw.pdf  used on input line 103.
 (pdftex.def)             Requested size: 526.96745pt x 395.22559pt.
  [9 <./svg-inkscape/pic9_sine_wave_svg-raw.pdf> <./svg-inkscape/pic10_step_response_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/pic10_step_response_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./svg-inkscape/pic12_total_noise_svg-raw.pdf, id=350, 526.96875pt x 395.22656pt>
+<./svg-inkscape/pic12_total_noise_svg-raw.pdf, id=351, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/pic12_total_noise_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pic12_total_noise_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/pic12_total_noise_svg-raw.pdf  used on input line 97.
+Package pdftex.def Info: ./svg-inkscape/pic12_total_noise_svg-raw.pdf  used on input line 110.
 (pdftex.def)             Requested size: 526.96745pt x 395.22559pt.
-<img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png, id=351, 782.17218pt x 381.67593pt>
+<img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png, id=352, 782.17218pt x 381.67593pt>
 File: img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png Graphic file (type png)
 <use img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png>
-Package pdftex.def Info: img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png  used on input line 104.
+Package pdftex.def Info: img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png  used on input line 117.
 (pdftex.def)             Requested size: 469.47046pt x 229.08885pt.
-<img/e_lab_1/pic14_monte_carlo_center_frequency_20db.png, id=352, 782.17218pt x 384.6872pt>
+<img/e_lab_1/pic14_monte_carlo_center_frequency_20db.png, id=353, 782.17218pt x 384.6872pt>
 File: img/e_lab_1/pic14_monte_carlo_center_frequency_20db.png Graphic file (type png)
 <use img/e_lab_1/pic14_monte_carlo_center_frequency_20db.png>
-Package pdftex.def Info: img/e_lab_1/pic14_monte_carlo_center_frequency_20db.png  used on input line 111.
+Package pdftex.def Info: img/e_lab_1/pic14_monte_carlo_center_frequency_20db.png  used on input line 124.
 (pdftex.def)             Requested size: 469.47046pt x 230.89627pt.
 File: img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png Graphic file (type png)
 <use img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png>
-Package pdftex.def Info: img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png  used on input line 118.
+Package pdftex.def Info: img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png  used on input line 131.
 (pdftex.def)             Requested size: 469.47046pt x 229.08885pt.
-<img//e_lab_1/Picture 17.png, id=353, 803.0pt x 513.92pt>
+<img//e_lab_1/Picture 17.png, id=354, 803.0pt x 513.92pt>
 File: img//e_lab_1/Picture 17.png Graphic file (type png)
 <use img//e_lab_1/Picture 17.png>
-Package pdftex.def Info: img//e_lab_1/Picture 17.png  used on input line 125.
+Package pdftex.def Info: img//e_lab_1/Picture 17.png  used on input line 138.
 (pdftex.def)             Requested size: 469.47046pt x 267.1955pt.
-<img//e_lab_1/Picture 16-f0-max.png, id=355, 803.0pt x 513.92pt>
+<img//e_lab_1/Picture 16-f0-max.png, id=356, 803.0pt x 513.92pt>
 File: img//e_lab_1/Picture 16-f0-max.png Graphic file (type png)
 <use img//e_lab_1/Picture 16-f0-max.png>
-Package pdftex.def Info: img//e_lab_1/Picture 16-f0-max.png  used on input line 132.
+Package pdftex.def Info: img//e_lab_1/Picture 16-f0-max.png  used on input line 145.
 (pdftex.def)             Requested size: 375.57779pt x 213.7578pt.
-<./svg-inkscape/pic11_bode_svg-raw.pdf, id=357, 526.96875pt x 395.22656pt>
+<./svg-inkscape/pic11_bode_svg-raw.pdf, id=358, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/pic11_bode_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pic11_bode_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/pic11_bode_svg-raw.pdf  used on input line 139.
+Package pdftex.def Info: ./svg-inkscape/pic11_bode_svg-raw.pdf  used on input line 152.
 (pdftex.def)             Requested size: 526.96745pt x 395.22559pt.
  [10 <./svg-inkscape/pic11_noise_density_svg-raw.pdf> <./svg-inkscape/pic12_total_noise_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/pic12_total_noise_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] [11 <./img/e_lab_1/pic13_monte_carlo_3db_bandwidth.png> <./img/e_lab_1/pic14_monte_carlo_center_frequency_20db.png>] [12 <./img//e_lab_1/Picture 17.png (PNG copy)>]) (chapters/e_lab_2.tex [13 <./svg-inkscape/pic11_bode_svg-raw.pdf> <./img//e_lab_1/Picture 16-f0-max.png (PNG copy)>] [14]
-<img//e_lab_2/schematic-2_3.png, id=404, 442.0515pt x 298.11375pt>
+<img//e_lab_2/schematic-2_3.png, id=405, 442.0515pt x 298.11375pt>
 File: img//e_lab_2/schematic-2_3.png Graphic file (type png)
 <use img//e_lab_2/schematic-2_3.png>
 Package pdftex.def Info: img//e_lab_2/schematic-2_3.png  used on input line 31.
 (pdftex.def)             Requested size: 352.10284pt x 237.46329pt.
  [15] [16{C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./img//e_lab_2/schematic-2_3.png>] [17] [18] [19]
-<./svg-inkscape/pic18_sin_outputs_svg-raw.pdf, id=470, 526.96875pt x 395.22656pt>
+<./svg-inkscape/pic18_sin_outputs_svg-raw.pdf, id=471, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/pic18_sin_outputs_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pic18_sin_outputs_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/pic18_sin_outputs_svg-raw.pdf  used on input line 233.
 (pdftex.def)             Requested size: 526.96745pt x 395.22559pt.
  [20]
-<./svg-inkscape/pic19_noise_density_svg-raw.pdf, id=477, 526.96875pt x 395.22656pt>
+<./svg-inkscape/pic19_noise_density_svg-raw.pdf, id=478, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/pic19_noise_density_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pic19_noise_density_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/pic19_noise_density_svg-raw.pdf  used on input line 240.
 (pdftex.def)             Requested size: 526.96745pt x 395.22559pt.
-<./svg-inkscape/pic19_total_noise_svg-raw.pdf, id=478, 526.96875pt x 395.22656pt>
+<./svg-inkscape/pic19_total_noise_svg-raw.pdf, id=479, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/pic19_total_noise_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pic19_total_noise_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/pic19_total_noise_svg-raw.pdf  used on input line 247.
@@ -1731,52 +1735,52 @@ Package pdftex.def Info: ./svg-inkscape/pic19_total_noise_svg-raw.pdf  used on i
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/pic19_noise_density_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<img/e_lab_2/pic-20.png, id=495, 803.0pt x 513.92pt>
-File: img/e_lab_2/pic-20.png Graphic file (type png)
-<use img/e_lab_2/pic-20.png>
-Package pdftex.def Info: img/e_lab_2/pic-20.png  used on input line 254.
+<img/e_lab_2/pic-20-v3.png, id=496, 803.0pt x 513.92pt>
+File: img/e_lab_2/pic-20-v3.png Graphic file (type png)
+<use img/e_lab_2/pic-20-v3.png>
+Package pdftex.def Info: img/e_lab_2/pic-20-v3.png  used on input line 254.
 (pdftex.def)             Requested size: 469.47046pt x 267.1955pt.
-<img/e_lab_2/pic-21-11.png, id=497, 803.0pt x 513.92pt>
+<img/e_lab_2/pic-21-11.png, id=498, 803.0pt x 513.92pt>
 File: img/e_lab_2/pic-21-11.png Graphic file (type png)
 <use img/e_lab_2/pic-21-11.png>
 Package pdftex.def Info: img/e_lab_2/pic-21-11.png  used on input line 261.
 (pdftex.def)             Requested size: 399.05275pt x 227.11896pt.
- [22 <./svg-inkscape/pic19_total_noise_svg-raw.pdf> <./img/e_lab_2/pic-20.png (PNG copy)>]
-<./svg-inkscape/EL2_bode_2_svg-raw.pdf, id=511, 526.96875pt x 395.22656pt>
+ [22 <./svg-inkscape/pic19_total_noise_svg-raw.pdf> <./img/e_lab_2/pic-20-v3.png (PNG copy)>]
+<./svg-inkscape/EL2_bode_2_svg-raw.pdf, id=512, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/EL2_bode_2_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/EL2_bode_2_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/EL2_bode_2_svg-raw.pdf  used on input line 268.
 (pdftex.def)             Requested size: 526.96745pt x 395.22559pt.
  [23 <./svg-inkscape/EL2_bode_2_svg-raw.pdf> <./img/e_lab_2/pic-21-11.png (PNG copy)>]) (chapters/e_lab_3.tex [24]
-<img//e_lab_3/schematic-2_4.png, id=528, 491.436pt x 220.4235pt>
+<img//e_lab_3/schematic-2_4.png, id=532, 491.436pt x 220.4235pt>
 File: img//e_lab_3/schematic-2_4.png Graphic file (type png)
 <use img//e_lab_3/schematic-2_4.png>
 Package pdftex.def Info: img//e_lab_3/schematic-2_4.png  used on input line 17.
 (pdftex.def)             Requested size: 352.10284pt x 157.93457pt.
-<img//e_lab_4/schematic-2_5.png, id=529, 506.49225pt x 337.26pt>
+<img//e_lab_4/schematic-2_5.png, id=533, 506.49225pt x 337.26pt>
 File: img//e_lab_4/schematic-2_5.png Graphic file (type png)
 <use img//e_lab_4/schematic-2_5.png>
 Package pdftex.def Info: img//e_lab_4/schematic-2_5.png  used on input line 23.
 (pdftex.def)             Requested size: 352.10284pt x 234.4645pt.
  [25 <./img//e_lab_3/schematic-2_4.png>] [26 <./img//e_lab_4/schematic-2_5.png>]
-<img/e_lab_3/picture_22.png, id=545, 803.0pt x 513.92pt>
+<img/e_lab_3/picture_22.png, id=549, 803.0pt x 513.92pt>
 File: img/e_lab_3/picture_22.png Graphic file (type png)
 <use img/e_lab_3/picture_22.png>
 Package pdftex.def Info: img/e_lab_3/picture_22.png  used on input line 97.
 (pdftex.def)             Requested size: 422.52054pt x 240.47316pt.
  [27]
-<img/e_lab_3/picture_23.png, id=555, 803.0pt x 513.92pt>
+<img/e_lab_3/picture_23.png, id=559, 803.0pt x 513.92pt>
 File: img/e_lab_3/picture_23.png Graphic file (type png)
 <use img/e_lab_3/picture_23.png>
 Package pdftex.def Info: img/e_lab_3/picture_23.png  used on input line 104.
 (pdftex.def)             Requested size: 422.52054pt x 240.47316pt.
-<img/e_lab_4/picture_24_Rg_GND.png, id=557, 803.0pt x 513.92pt>
+<img/e_lab_4/picture_24_Rg_GND.png, id=561, 803.0pt x 513.92pt>
 File: img/e_lab_4/picture_24_Rg_GND.png Graphic file (type png)
 <use img/e_lab_4/picture_24_Rg_GND.png>
 Package pdftex.def Info: img/e_lab_4/picture_24_Rg_GND.png  used on input line 111.
 (pdftex.def)             Requested size: 375.57779pt x 213.7578pt.
  [28 <./img/e_lab_3/picture_22.png (PNG copy)> <./img/e_lab_3/picture_23.png (PNG copy)>]
-<./svg-inkscape/EL3_bode3_svg-raw.pdf, id=567, 526.96875pt x 395.22656pt>
+<./svg-inkscape/EL3_bode3_svg-raw.pdf, id=571, 526.96875pt x 395.22656pt>
 File: ./svg-inkscape/EL3_bode3_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/EL3_bode3_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/EL3_bode3_svg-raw.pdf  used on input line 118.
@@ -1794,7 +1798,7 @@ Package pdftex.def Info: ./svg-inkscape/EL3_bode3_svg-raw.pdf  used on input lin
 \openout4 = `comment.cut'.
 
  Straight input of comment.cut. (comment.cut)) (endpage/signature.tex
-<endpage/SignatureAuthorOne.jpg, id=596, 126.7134pt x 48.6618pt>
+<endpage/SignatureAuthorOne.jpg, id=600, 126.7134pt x 48.6618pt>
 File: endpage/SignatureAuthorOne.jpg Graphic file (type jpg)
 <use endpage/SignatureAuthorOne.jpg>
 Package pdftex.def Info: endpage/SignatureAuthorOne.jpg  used on input line 11.
@@ -1804,7 +1808,7 @@ Overfull \hbox (1.09998pt too wide) in paragraph at lines 13--15
  [][] 
  []
 
-<endpage/SignatureAuthorTwo.png, id=597, 592.2125pt x 246.9225pt>
+<endpage/SignatureAuthorTwo.png, id=601, 592.2125pt x 246.9225pt>
 File: endpage/SignatureAuthorTwo.png Graphic file (type png)
 <use endpage/SignatureAuthorTwo.png>
 Package pdftex.def Info: endpage/SignatureAuthorTwo.png  used on input line 21.
@@ -1831,7 +1835,7 @@ File: temp_graphics/chapterBacking-eps-converted-to.pdf Graphic file (type pdf)
 <use temp_graphics/chapterBacking-eps-converted-to.pdf>
 Package pdftex.def Info: temp_graphics/chapterBacking-eps-converted-to.pdf  used on input line 1.
 (pdftex.def)             Requested size: 422.3298pt x 97.26382pt.
-<img/e_lab_1/calculations_P1.jpg, id=604, 597.432pt x 844.8363pt>
+<img/e_lab_1/calculations_P1.jpg, id=608, 597.432pt x 844.8363pt>
 File: img/e_lab_1/calculations_P1.jpg Graphic file (type jpg)
 <use img/e_lab_1/calculations_P1.jpg>
 Package pdftex.def Info: img/e_lab_1/calculations_P1.jpg  used on input line 7.
@@ -1842,50 +1846,50 @@ Package pdftex.def Info: img/e_lab_1/calculations_P1.jpg  used on input line 7.
 Overfull \vbox (233.43611pt too high) has occurred while \output is active []
 
  [33 <./img/e_lab_1/calculations_P1.jpg>]
-<img/e_lab_1/calculations_P2.jpg, id=615, 597.432pt x 845.3181pt>
+<img/e_lab_1/calculations_P2.jpg, id=619, 597.432pt x 845.3181pt>
 File: img/e_lab_1/calculations_P2.jpg Graphic file (type jpg)
 <use img/e_lab_1/calculations_P2.jpg>
 Package pdftex.def Info: img/e_lab_1/calculations_P2.jpg  used on input line 14.
 (pdftex.def)             Requested size: 422.52054pt x 597.84543pt.
-<img/e_lab_1/calculations_P3.jpg, id=616, 597.432pt x 844.8363pt>
+<img/e_lab_1/calculations_P3.jpg, id=620, 597.432pt x 844.8363pt>
 File: img/e_lab_1/calculations_P3.jpg Graphic file (type jpg)
 <use img/e_lab_1/calculations_P3.jpg>
 Package pdftex.def Info: img/e_lab_1/calculations_P3.jpg  used on input line 21.
 (pdftex.def)             Requested size: 422.52054pt x 597.50468pt.
  [34 <./img/e_lab_1/calculations_P2.jpg>]
-<img/e_lab_1/calculations_P4.jpg, id=622, 845.3181pt x 597.432pt>
+<img/e_lab_1/calculations_P4.jpg, id=626, 845.3181pt x 597.432pt>
 File: img/e_lab_1/calculations_P4.jpg Graphic file (type jpg)
 <use img/e_lab_1/calculations_P4.jpg>
 Package pdftex.def Info: img/e_lab_1/calculations_P4.jpg  used on input line 28.
 (pdftex.def)             Requested size: 422.52054pt x 298.61499pt.
  [35 <./img/e_lab_1/calculations_P3.jpg>]
-chapters/appendix.tex:111: ignored: Infinite glue shrinkage found in box being split [36 <./img/e_lab_1/calculations_P4.jpg>]
-chapters/appendix.tex:111: ignored: Infinite glue shrinkage found in box being split [37]
-chapters/appendix.tex:218: ignored: Infinite glue shrinkage found in box being split [38]
-chapters/appendix.tex:218: ignored: Infinite glue shrinkage found in box being split [39]
-chapters/appendix.tex:218: ignored: Infinite glue shrinkage found in box being split [40]
-chapters/appendix.tex:272: ignored: Infinite glue shrinkage found in box being split [41]
-chapters/appendix.tex:272: ignored: Infinite glue shrinkage found in box being split [42]
-chapters/appendix.tex:328: ignored: Infinite glue shrinkage found in box being split [43]) [44] (main.aux)
+chapters/appendix.tex:112: ignored: Infinite glue shrinkage found in box being split [36 <./img/e_lab_1/calculations_P4.jpg>]
+chapters/appendix.tex:112: ignored: Infinite glue shrinkage found in box being split [37]
+chapters/appendix.tex:219: ignored: Infinite glue shrinkage found in box being split [38]
+chapters/appendix.tex:219: ignored: Infinite glue shrinkage found in box being split [39]
+chapters/appendix.tex:219: ignored: Infinite glue shrinkage found in box being split [40]
+chapters/appendix.tex:273: ignored: Infinite glue shrinkage found in box being split [41]
+chapters/appendix.tex:273: ignored: Infinite glue shrinkage found in box being split [42]
+chapters/appendix.tex:329: ignored: Infinite glue shrinkage found in box being split [43]) [44] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3E0E4A152905040C6C15721B70AFCA64;5614.
+(rerunfilecheck)             Checksum: 8892C78836EBB86BAB40B1DFA05A41E2;5614.
  ) 
 Here is how much of TeX's memory you used:
- 66413 strings out of 467866
- 1604958 string characters out of 5418325
- 2468567 words of memory out of 5000000
- 94163 multiletter control sequences out of 15000+600000
- 700731 words of font info for 81 fonts, out of 8000000 for 9000
+ 66424 strings out of 467866
+ 1605122 string characters out of 5418325
+ 2468665 words of memory out of 5000000
+ 94169 multiletter control sequences out of 15000+600000
+ 707452 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,21n,131p,2528b,1319s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro9.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/conta/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qagb.pfb>
-Output written on main.pdf (48 pages, 4283336 bytes).
+Output written on main.pdf (48 pages, 4259535 bytes).
 PDF statistics:
- 773 PDF objects out of 1000 (max. 8388607)
- 165 named destinations out of 1000 (max. 500000)
+ 777 PDF objects out of 1000 (max. 8388607)
+ 166 named destinations out of 1000 (max. 500000)
  512 words of extra memory for PDF output out of 10000 (max. 10000000)
 

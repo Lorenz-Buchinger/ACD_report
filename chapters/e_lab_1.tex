@@ -68,7 +68,20 @@
     The measured resistor values show deviations below 1\% with respect to the nominal chosen E24 values, which confirms the specified tolerance class. 
     The capacitor measurements also confirm the 1\% NP0 specification and therefore only introduce minor shifts in the center frequency.
     
-    The measurements for the bode plot can be found at the appendix in table \ref{tab:bode_measurements_active_band_pass}.
+    \begin{table}[H]
+        \centering
+        \caption{Center and corner frequencies with their corresponding gain values.}
+        \begin{tabular}{c!{\vrule width 2pt}c!{\vrule width 2pt}c!{\vrule width 2pt}c|}
+            \cline{2-4}
+             & \textbf{-3dB Corner Frequency} & \textbf{Center Frequency} & \textbf{+3dB Corner Frequency} 
+            \\ \noalign{\hrule height 2pt}
+            \multicolumn{1}{|c!{\vrule width 2pt}}{Frequency in Hz} & 4.32 & 4.57 & 4.94 \\ \hline
+            \multicolumn{1}{|c!{\vrule width 2pt}}{Gain in dB} & 19.3 & 22.3 & 19.3 \\ \hline
+        \end{tabular}
+        \label{tab:corner_and_center_frequency_gain}
+    \end{table}
+
+    \noindent The measurements for the bode plot can be found at the appendix in table \ref{tab:bode_measurements_active_band_pass}.
 
 \subsection{Curves \& Diagrams}
     \begin{figure}[H]
